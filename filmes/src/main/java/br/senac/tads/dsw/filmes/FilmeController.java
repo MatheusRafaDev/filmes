@@ -25,7 +25,7 @@ public class FilmeController {
     public String listarFilmes(Model model) {
         List<Filme> filmes = filmeRepository.findAll();
         model.addAttribute("filmes", filmes);
-        return "list";
+        return "lista";
     }
 
     @GetMapping("/novo")

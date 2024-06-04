@@ -86,3 +86,11 @@ th, td {
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* Estilo para mensagens de erro de validação */
+.error {
+    color: #dc3545;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}

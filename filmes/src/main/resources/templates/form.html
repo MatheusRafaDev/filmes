@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1 th:text="${filme.id == null ? 'Adicionar Novo Filme' : 'Editar Filme'}"></h1>
-    <form th:action="@{${filme.id == null ? '/filmes/novo' : '/filmes/editar/' + ${filme.id}}}" th:object="${filme}" method="post">
+    <form th:action="${filme.id == null ? '/filmes/novo' : '/filmes/editar/' + filme.id}" th:object="${filme}" method="post">
         <div>
             <label for="titulo">Título:</label>
             <input type="text" id="titulo" th:field="*{titulo}" />
