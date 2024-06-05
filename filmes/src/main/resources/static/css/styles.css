@@ -78,7 +78,7 @@ th, td {
 }
 
 /* Estilo para o botão de exclusão */
-.delete-button {
+.deletar {
     background-color: #dc3545;
     color: #fff;
     padding: 5px 10px;
@@ -88,9 +88,20 @@ th, td {
 }
 
 /* Estilo para mensagens de erro de validação */
-.error {
+.erro {
     color: #dc3545;
     margin-top: -10px;
     margin-bottom: 10px;
     font-size: 14px;
+}
+
+
+/* Estilo para mensagens de sucesso */
+.successo {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #007bff;
+    background-color: #dff0d8;
+    color: #004691;
+    border-radius: 5px;
 }

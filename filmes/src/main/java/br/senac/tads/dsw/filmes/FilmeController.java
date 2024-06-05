@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import jakarta.validation.Valid;
 
@@ -35,11 +36,12 @@ public class FilmeController {
     }
 
     @PostMapping("/novo")
-    public String adicionarFilme(@Valid @ModelAttribute("filme") Filme filme, BindingResult result) {
+    public String adicionarFilme(@Valid @ModelAttribute("filme") Filme filme, BindingResult result, RedirectAttributes redirectAttributes) {
         if (result.hasErrors()) {
             return "form";
         }
         filmeRepository.save(filme);
+        redirectAttributes.addFlashAttribute("mensagemSucesso", "Filme adicionado com sucesso!");
         return "redirect:/filmes";
     }
 
@@ -52,22 +54,22 @@ public class FilmeController {
     }
 
     @PostMapping("/editar/{id}")
-    public String atualizarFilme(@PathVariable("id") Integer id, @Valid @ModelAttribute("filme") Filme filme,
-                              BindingResult result) {
+    public String atualizarFilme(@PathVariable("id") Integer id, @Valid @ModelAttribute("filme") Filme filme, BindingResult result, RedirectAttributes redirectAttributes) {
         if (result.hasErrors()) {
             filme.setId(id.longValue());
             return "form";
         }
         filmeRepository.save(filme);
+        redirectAttributes.addFlashAttribute("mensagemSucesso", "Filme atualizado com sucesso!");
         return "redirect:/filmes";
     }
 
-
     @GetMapping("/excluir/{id}")
-    public String excluirFilme(@PathVariable("id") Integer id) {
+    public String excluirFilme(@PathVariable("id") Integer id, RedirectAttributes redirectAttributes) {
         Filme filme = filmeRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("ID de filme inválido:" + id));
         filmeRepository.delete(filme);
+        redirectAttributes.addFlashAttribute("mensagemSucesso", "Filme excluído com sucesso!");
         return "redirect:/filmes";
     }
 }

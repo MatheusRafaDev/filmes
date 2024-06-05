@@ -6,6 +6,12 @@
 </head>
 <body>
     <h1>Filmes Cadastrados</h1>
+
+
+    <div th:if="${mensagemSucesso}" class="successo">
+        <p th:text="${mensagemSucesso}"></p>
+    </div>
+
     <table>
         <thead>
             <tr>
