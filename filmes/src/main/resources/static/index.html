@@ -1,50 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informações do Projeto</title>
-    <link rel="stylesheet" type="text/css" href="/styles.css">
-    <style>
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .observacao {
-            margin-top: 20px;
-            font-size: 1.1em;
-        }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 15px;
-            color: #fff;
-            background-color: #007bff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
 
-        pre {
-            background-color: #f8f9fa;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Informações do Projeto</h1>
-        <p><strong>Nome Completo:</strong> Miguel Heitor Silva Oliveira</p>
-        <div class="observacao">
-            <h2>Observações sobre o Desenvolvimento:</h2>
+<style>
+pre {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+</style>
+<html>
+    <head>
+        <title>TADS Atividade Desenvolvimento Web 2023-2</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+
+
+    <body>
+        <h1>Listagem e inclusão de filmes</h1>
+        <h2>TADS Atividade Desenvolvimento Web 2024-1 - Turma B</h2>
+        <p>Nome completo: <strong>Miguel Heitor Silva Oliveira</strong></p> <!-- TROCAR O xxxxxx PELO NOME COMPLETO-->
+        <p>Está cursando PI4 neste semestre? <strong>NÃO</strong></p> <!-- MANTER SOMENTE O SIM OU O NÃO -->
+        <h2>Observações sobre o Desenvolvimento:</h2>
             <p>
                 O projeto foi desenvolvido usando Java 21 e Spring Boot 3.
             </p>
@@ -55,9 +32,8 @@
                 Comando para rodar o projeto:
                 <pre>&#x26; 'C:\Program Files\Java\jdk-22\bin\java.exe' '@C:\Users\miguel\AppData\Local\Temp\cp_sf2w2bhcbtbc1njxp7l0p97f.argfile' 'br.senac.tads.dsw.filmes.FilmesApplication'</pre>
             </p>
-        </div>
-        <a href="/filmes">Listar Filmes</a>
-        <a href="/filmes/novo">Adicionar Novo Filme</a>
-    </div>
-</body>
+        <p>
+            <a href="/filmes">Listar Filmes</a> <!-- Colocar no href o link para tela de listagem das músicas -->
+        </p>
+    </body>
 </html>
